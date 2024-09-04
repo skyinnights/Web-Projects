@@ -1,0 +1,96 @@
+/* Reset some default styles */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffff99;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #ff6600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 2px solid #ff6600;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+label, select, textarea {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ff6600;
+}
+
+input[type="number"]{
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+}
+
+textarea{
+    width: 96%;
+    padding: 10px;
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #ff9900;
+}
+
+#total-cost {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ff6600;
+    text-align: center;
+}

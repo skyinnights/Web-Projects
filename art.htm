@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Art Supply Order Form</title>
+    <link rel="stylesheet" type="text/css" href="art.css">
+    <script src="art.js"></script>
+</head>
+<body>
+    <h1>Historical Baddies Art Store!</h1>
+    <form id="order-form">
+        <table>
+            <tr>
+                <th>Art</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Heinrich_Knirr_%E2%80%93_%E2%80%9EF%C3%BChrerbildnis%E2%80%9C_%281937%29.jpg/220px-Heinrich_Knirr_%E2%80%93_%E2%80%9EF%C3%BChrerbildnis%E2%80%9C_%281937%29.jpg" alt="Hitler"></td>
+                <td>$5.00</td>
+                <td><input type="number" name="hitler" id="hitler" value="0" min="0"></td>
+            </tr>
+            <tr>
+                <td><img src="https://www.gregorybeylerian.com/wp-content/uploads/2013/03/portrait-of-osama-bin-laden-gregory-beylerian.jpg" alt="Osama"></td>
+                <td>$12.00</td>
+                <td><input type="number" name="osama" id="osama" value="0" min="0"></td>
+            </tr>
+			<tr>
+                <td><img src="https://www.artelino.com/auctionimages/items/51336a.jpg" alt="Changez"></td>
+                <td>$10.00</td>
+                <td><input type="number" name="changez" id="changez" value="0" min="0"></td>
+            </tr>
+         
+        </table>
+
+        <label>Select Payment Method:</label>
+        <select name="payment-method">
+            <option value="crayons">Crayon Scribbles</option>
+            <option value="finger-paint">Finger Paint</option>
+            <option value="pennies">Paying in Pennies</option>
+        </select>
+
+        <label>Special Art Requests:</label>
+        <textarea name="special-requests" rows="4" cols="50"></textarea>
+
+        <label>Extra Whimsy Options:</label>
+		   <div id="container">
+				<input type="checkbox" name="option1" id="glitter" value="1.5">
+				Glitter Bomb ($1.5)
+			</div>
+			<div id="container">
+				<input type="checkbox" name="option2" id="eyes" value="1.5"> Googly Eyes ($1.5)
+			</div>
+
+        <p>Total Cost: <span id="total-cost">$0.00</span></p>
+
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+        <button type="reset">Start Over</button>
+    </form>
+</body>
+</html>
