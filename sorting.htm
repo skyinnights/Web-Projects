@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<style>
+
+			table{
+				width: 100%;
+			}
+
+			td{
+				width: 50%
+			}
+
+			#expensesTable td{
+			width: auto;
+			}
+
+		</style>
+		
+		<script>
+			function sortNames() {
+				var nameInputs = document.getElementById('studentNames').getElementsByTagName('input');
+
+				var names = [];
+				for (var i = 0; i < nameInputs.length; i++) {
+					names.push(nameInputs[i].value);
+				}
+				names.sort();
+
+				var sortedNamesDiv = document.getElementById('sortedNames');
+				for (var j = 0; j < names.length; j++) {
+					sortedNamesDiv.innerHTML += names[j];
+					if (j < names.length - 1) {
+						sortedNamesDiv.innerHTML += ', ';
+					}
+				}
+			}
+
+			function clearNames() {
+				var nameInputs = document.getElementById('studentNames').getElementsByTagName('input');
+
+				for (var i = 0; i < nameInputs.length; i++) {
+					nameInputs[i].value = '';
+				}
+
+				document.getElementById('sortedNames').textContent = '';
+			}
+
+			
+			function sortExpenses() {
+				var expenseInputs = document.getElementById('expenses').getElementsByTagName('input');
+
+				var expenses = [];
+				for (var i = 0; i < expenseInputs.length; i++) {
+					expenses.push(parseFloat(expenseInputs[i].value));
+				}
+				expenses.sort(function (a, b) { return a - b; });
+
+				var sortedExpensesDiv = document.getElementById('sortedExpenses');
+				for (var j = 0; j < expenses.length; j++) {
+					sortedExpensesDiv.innerHTML += expenses[j];
+					if (j < expenses.length - 1) {
+						sortedExpensesDiv.innerHTML += ', ';
+					}
+				}
+				sortedExpensesDiv.innerHTML += '<br> The smallest value is: ' + expenses[0];
+				sortedExpensesDiv.innerHTML += '<br> The largest value is: ' + expenses[expenses.length - 1];
+			}
+
+			
+			function clearExpenses() {
+				var expenseInputs = document.getElementById('expenses').getElementsByTagName('input');
+
+				for (var i = 0; i < expenseInputs.length; i++) {
+					expenseInputs[i].value = '';
+				}
+
+				document.getElementById('sortedExpenses').textContent = '';
+			}
+		</script>
+
+	</head>
+
+	<body>
+
+		<table>
+		
+			<tr>
+				<td>
+
+					<form id="studentNames">
+						<h2>Fill in Students Names</h2>
+
+						<p>Last Names</p>
+						
+						<p>Student 1: <input type = "text"> </p>
+						<p>Student 2: <input type = "text"> </p>
+						<p>Student 3: <input type = "text"> </p>
+						<p>Student 4: <input type = "text"> </p>
+						<p>Student 5: <input type = "text"> </p>
+
+						<button type="button" onclick="sortNames()"> Sort Names </button>
+						<br>
+						<div id="sortedNames"></div>
+						<br>
+						<button type="reset" onclick="clearNames()"> Clear Names </button>
+
+					</form>
+
+				</td>
+
+				<td>
+
+					<form id="expenses">
+
+						<h2>Fill in Your Daily Expenses</h2>
+
+						<p>DAYS:</p>
+
+						<table id = "expensesTable">
+							<tr>
+								<td>Monday:</td>
+								<td><input type = "text"></td>
+							</tr>
+							<tr>
+								<td>Tuesday:</td>
+								<td><input type = "text"></td>
+							</tr>
+							<tr>
+								<td>Wednesday:</td>
+								<td><input type = "text"></td>
+							</tr>
+							<tr>
+								<td>Thursday:</td>
+								<td><input type = "text"></td>
+							</tr>
+							<tr>
+								<td>Friday:</td>
+								<td><input type = "text"></td>
+							</tr>
+							<tr>
+								<td>Saturday:</td>
+								<td><input type = "text"></td>
+							</tr>
+							<tr>
+								<td>Sunday:</td>
+								<td><input type = "text"></td>
+							</tr>
+						</table>
+
+						<br>
+						<button type="button" onclick="sortExpenses()"> Sort Expense </button>
+						<br>
+						<div id="sortedExpenses"></div>
+						<br>
+						<button type="reset" onclick="clearExpenses()">Clear Expenses </button>
+
+					</form>
+
+				</td>
+			</tr>
+
+		</table>
+		
+		
+
+	</body>
+</html>

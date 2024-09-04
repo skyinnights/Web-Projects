@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Calculator</title>
+		
+
+
+	</head>
+
+	<body>
+	
+		<h1> Simple Calculator </h1>
+		
+		<h2> Please enter two numbers: </h2>
+		
+		<form>
+			<p>Number 1: <input type="Number" id="num1"></p>
+			<p>Number 2: <input type="Number" id="num2"></p>
+			
+			
+			<button type="button" id="Addition" onClick="calculation(1);">Addition</button>
+			<button type="button" id="Subtraction" onClick="calculation(2);">Subtraction</button>
+			<button type="button" id="Multiplication" onClick="calculation(3);">Multiplication</button>
+			<button type="button" id="Division" onClick="calculation(4);">Division</button>
+			<br>
+			<p id="results"> </p>
+			<br>
+			<button type="reset" class="btn">Clear</button>
+		</form>
+
+		<p id="demo"></p>
+		
+		<script>
+		
+			try{
+			
+				function calculation(x){
+					if (x == 1){
+						let number1 = parseFloat(document.getElementById("num1").value);
+						let number2 = parseFloat(document.getElementById("num2").value);
+						let sol = number1 + number2;
+						document.getElementById("results").innerText = sol;
+					}
+					
+					else if (x==2){
+						let number1 = parseFloat(document.getElementById("num1").value);
+						let number2 = parseFloat(document.getElementById("num2").value);
+						let sol = number1 - number2;
+						document.getElementById("results").innerText = sol;
+					}
+					
+					else if (x==3){
+						let number1 = parseFloat(document.getElementById("num1").value);
+						let number2 = parseFloat(document.getElementById("num2").value);
+						let sol = number1 * number2;
+						document.getElementById("results").innerText = sol;
+					}
+					
+						else if (x==4){
+						let number1 = parseFloat(document.getElementById("num1").value);
+						let number2 = parseFloat(document.getElementById("num2").value);
+						
+						
+						if (number2 !== 0) {
+							let sol = number1 / number2;
+							document.getElementById("results").innerText = sol;
+						} else {
+							document.getElementById("results").innerText = "Cannot divide by zero";
+						}
+					}
+					
+					else{
+					document.getElementById("results").innerText = "ERROR";
+					}
+					
+				};
+			
+			}
+			catch(err){
+				document.getElementById("demo").innerHTML = err.message;
+			}
+		</script>
+	
+	
+	</body>
+	
+</html>
