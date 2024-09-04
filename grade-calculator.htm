@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="grade-calculator.css" />
+    <script src="grade-calculator.js"></script>
+
+</head>
+
+<body>
+    <form id="gradeForm">
+		<table>
+			<tr>
+				<th>Names</th>
+				<th>Test Score</th>
+				<th>Calculated Letter Grade</th>
+			</tr>
+			
+			<tr>
+				<td><input type="text" id="names1" class="names">First Student</td>
+				<td><input type="number" min="0" id="score1" class="otherinputs">Score for the First Student</td>
+				<td><input type="text" readonly id="grade1" class="otherinputs">Calculated Grade for 1st Student</td>
+			</tr>
+			
+			<tr>
+				<td><input type="text" id="names2" class="names">Second Student</td>
+				<td><input type="number" min="0" id="score2" class="otherinputs">Score for the Second Student</td>
+				<td><input type="text" readonly id="grade2" class="otherinputs">Calculated Grade for 2nd Student</td>
+			</tr>
+			
+			<tr>
+				<td><input type="text" id="names3" class="names">Third Student</td>
+				<td><input type="number" min="0" id="score3" class="otherinputs">Score for the Third Student</td>
+				<td><input type="text" readonly id="grade3" class="otherinputs">Calculated Grade for 3rd Student</td>
+			</tr>
+			
+			<tr>
+				<td><input type="text" id="names4" class="names">Fourth Student</td>
+				<td><input type="number" min="0" id="score4" class="otherinputs">Score for the Fourth Student</td>
+				<td><input type="text" readonly id="grade4" class="otherinputs">Calculated Grade for 4th Student</td>
+			</tr>
+		
+		
+		</table>
+		
+		<button type="button" id="calculateButton" onClick="calculateGrades();">Calculate grades</button>
+		<p><b>The Average score for all the students is: </b><input type="text" id="averageScore" class="otherinputs" readonly></p>
+		<button type="reset" class="btn">Clear</button>
+
+    </form>
+
+
+</body>
+
+</html>
